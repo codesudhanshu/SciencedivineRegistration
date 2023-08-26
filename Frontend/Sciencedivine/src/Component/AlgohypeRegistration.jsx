@@ -20,7 +20,7 @@ const AlgohypeRegistration = () => {
 
 
    const submitdata = () =>{
-    axios.post('http://localhost:8081/api/reception/registration',{name,email,address,phonenumber})
+    axios.post('https://sciencedivine-registration.vercel.app/api/reception/registration',{name,email,address,phonenumber})
     .then(()=>console.log("the data has been succesfully added"))
     .catch((err)=>console.log(err))
     setopen(false)
@@ -32,7 +32,7 @@ const AlgohypeRegistration = () => {
    useEffect(() => {
      async function fetchUsers() { 
        try {
-         const response = await axios.get('http://localhost:8081/api/reception/registrationfetch');
+         const response = await axios.get('https://sciencedivine-registration.vercel.app/api/reception/registrationfetch');
          setUsers(response.data);
        } catch (error) {
          console.error("Error fetching users:", error);
