@@ -5,7 +5,13 @@ const mongoose = require('mongoose')
 const registrationmodel = require('./registration') 
 
 const app = express()
-app.use(cors())
+app.use(cors(
+    {
+        origin: {"https://registrationsciencedivine-app.vercel.app/"},
+        methods:['GET','POST'],
+        credentials: true
+    }
+))
 app.use(express.json())
 
 mongoose.connect('mongodb+srv://sudhanshusrivastava10082004:<Sudhanshu@2001>@sciencedivine.jdrmyim.mongodb.net/userregistration?retryWrites=true&w=majority', {useNewUrlParser:true, useUnifiedTopology:true})
