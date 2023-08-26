@@ -11,7 +11,7 @@ const RouterFile = () => {
         <NavigationBar />
         <div className='main-container'>
         <Routes>          
-            <Route path="/public/registration" element={<PublicRegistration />} />
+            <Route path="/" element={<PublicRegistration />} />
             <Route path="/algohype/registration" element={<AlgohypeRegistration />} />
           </Routes>
     </div>
