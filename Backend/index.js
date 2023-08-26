@@ -7,7 +7,7 @@ const registrationmodel = require('./registration')
 const app = express()
 app.use(cors(
     {
-        origin: {"https://registrationsciencedivine-app.vercel.app/"},
+        origin: {"https://registrationsciencedivine-app.vercel.app"},
         methods:['GET','POST'],
         credentials: true
     }
