@@ -5,10 +5,15 @@ const mongoose = require('mongoose')
 const registrationmodel = require('./registration') 
 
 const app = express()
-app.use(cors())
+app.use(cors(
+    {
+        origin: ["https://sciencedivine-registration.vercel.app"],
+        methods: ["POST","GET"],
+        credentials,true
+))
 app.use(express.json())
 
-mongoose.connect('mongodb://127.0.0.1:27017/userregistration', {useNewUrlParser:true, useUnifiedTopology:true})
+mongoose.connect('mongodb+srv://sudhanshusrivastava10082004:<Sudhanshu@2001>@sciencedivine.jdrmyim.mongodb.net/userregistration?retryWrites=true&w=majority', {useNewUrlParser:true, useUnifiedTopology:true})
 .then(()=>console.log("mongodb has been started"))
 .catch((err)=>{console.log(err)})
 
